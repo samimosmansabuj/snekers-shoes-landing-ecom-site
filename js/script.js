@@ -100,6 +100,144 @@ const PRODUCTS = [
       'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
     ],
   },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Solstice Slip',
+    badge: 'New Arrival',
+    description: 'Effortless entry, premium feel. A slip-on mule sculpted from nappa leather with a featherweight platform.',
+    features: ['Nappa leather upper', 'Elasticated back strap', 'EVA platform sole', 'Leather footbed'],
+    rating: 4.6,
+    reviews: 87,
+    colors: [
+      { name: 'White', hex: '#f5f5f0' },
+      { name: 'Blush', hex: '#e8b4a0' },
+      { name: 'Ebony', hex: '#2c2c2c' },
+    ],
+    sizes: ['40', '41', '42', '43', '44', '45'],
+    originalPrice: 6500,
+    salePrice: 5200,
+    discount: '20%',
+    images: [
+      'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=800&q=80',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?w=800&q=80',
+      'https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=800&q=80',
+    ],
+  },
 ];
 
 /* ════════════════════════════════════
@@ -132,6 +270,7 @@ const continueShoppingBtn  = $('#continueShoppingBtn');
 
 const productSkeleton      = $('#productSkeleton');
 const productGrid          = $('#productGrid');
+const productSwiperWrapper = $('#productSwiperWrapper');
 
 const productModalOverlay  = $('#productModalOverlay');
 const productModal         = $('#productModal');
@@ -213,7 +352,47 @@ function renderProducts() {
       const card = createProductCard(product);
       productGrid.appendChild(card);
     });
+
+    renderProductSlider();
   }, 600);
+}
+
+function renderProductSlider() {
+  if (!productSwiperWrapper) return;
+
+  PRODUCTS.forEach(product => {
+    const slide = document.createElement('div');
+    slide.className = 'swiper-slide';
+
+    const card = createProductCard(product);
+    slide.appendChild(card);
+
+    productSwiperWrapper.appendChild(slide);
+  });
+
+  new Swiper('.product-swiper', {
+    loop: false,
+    rewind: false,
+    slidesPerView: 2,
+    slidesPerGroup: 2,
+    spaceBetween: 0,
+    centeredSlides: false,
+    watchOverflow: true,
+    allowTouchMove: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      640: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 0 },
+      900: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 8 },
+      1200: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 10 },
+    },
+  });
 }
 
 function createProductCard(product) {
@@ -221,41 +400,23 @@ function createProductCard(product) {
   card.className = 'product-card';
   card.dataset.id = product.id;
 
-  const selectedColor = product.colors[0];
-  const selectedSize  = product.sizes[0];
-
   card.innerHTML = `
     <div class="card-img-wrap" data-id="${product.id}">
       <img src="${product.images[0]}" alt="${product.name}" loading="lazy" />
-      <span class="card-badge">${product.badge}</span>
+      <span class="card-badge">
+        <span class="price-sale">৳${product.salePrice.toLocaleString()}</span>
+        <span class="discount-badge">(-${product.discount})</span>
+      </span>
     </div>
     <div class="card-body">
-      <h3 class="card-name" data-id="${product.id}">${product.name}</h3>
-      <div class="card-rating">
-        <span class="stars">${renderStars(product.rating)}</span>
-        <span>${product.rating} (${product.reviews})</span>
-      </div>
-      <div class="card-colors">
-        ${product.colors.map((c, i) => `
-          <div class="color-dot ${i === 0 ? 'active' : ''}"
-               style="background:${c.hex};"
-               title="${c.name}"
-               data-color="${c.name}"
-               data-card-id="${product.id}">
-          </div>`).join('')}
-      </div>
-      <div class="card-sizes">
-        ${product.sizes.map((s, i) => `
-          <button class="size-chip ${i === 0 ? 'active' : ''}"
-                  data-size="${s}"
-                  data-card-id="${product.id}">
-            ${s}
-          </button>`).join('')}
-      </div>
-      <div class="card-price">
-        <span class="price-original">৳${product.originalPrice.toLocaleString()}</span>
-        <span class="price-sale">৳${product.salePrice.toLocaleString()}</span>
-        <span class="discount-badge">-${product.discount}</span>
+      <div>
+        <h3 class="card-name" data-id="${product.id}">${product.name}</h3>
+        <div class="card-meta">
+          <div class="card-rating">
+            <span class="stars">${renderStars(product.rating)}</span>
+            <span>${product.rating} (${product.reviews})</span>
+          </div>
+        </div>
       </div>
     </div>
     <div class="card-actions">
@@ -268,22 +429,6 @@ function createProductCard(product) {
     </div>
   `;
 
-  // Color selection
-  card.querySelectorAll('.color-dot').forEach(dot => {
-    dot.addEventListener('click', () => {
-      card.querySelectorAll('.color-dot').forEach(d => d.classList.remove('active'));
-      dot.classList.add('active');
-    });
-  });
-
-  // Size selection
-  card.querySelectorAll('.size-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      card.querySelectorAll('.size-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-    });
-  });
-
   // Open product modal
   card.querySelector('.card-img-wrap').addEventListener('click', () => openProductModal(product));
   card.querySelector('.card-name').addEventListener('click', () => openProductModal(product));
@@ -291,7 +436,7 @@ function createProductCard(product) {
   // Add to cart
   card.querySelector('.add-to-cart-btn').addEventListener('click', () => {
     const color = card.querySelector('.color-dot.active')?.dataset.color || product.colors[0].name;
-    const size  = card.querySelector('.size-chip.active')?.dataset.size  || product.sizes[0];
+    const size  = product.sizes[0];
     addToCart(product, color, size, 1);
     showMobileBottomBar(product);
   });
@@ -299,7 +444,7 @@ function createProductCard(product) {
   // Buy now
   card.querySelector('.buy-now-btn').addEventListener('click', () => {
     const color = card.querySelector('.color-dot.active')?.dataset.color || product.colors[0].name;
-    const size  = card.querySelector('.size-chip.active')?.dataset.size  || product.sizes[0];
+    const size  = product.sizes[0];
     addToCart(product, color, size, 1);
     openCartDrawer();
   });
@@ -510,6 +655,25 @@ function changeQty(key, delta) {
   updateCheckoutSummary();
 }
 
+function changeCartItemSize(key, newSize) {
+  const item = cart.find(i => i.key === key);
+  if (!item || item.size === newSize) return;
+
+  const existing = cart.find(i => i.id === item.id && i.color === item.color && i.size === newSize);
+  if (existing) {
+    existing.qty += item.qty;
+    cart = cart.filter(i => i.key !== key);
+  } else {
+    item.size = newSize;
+    item.key = `${item.id}_${item.color}_${item.size}`;
+  }
+
+  saveCart();
+  updateCartUI();
+  renderCartItems();
+  updateCheckoutSummary();
+}
+
 function getCartTotal() {
   return cart.reduce((sum, i) => sum + i.price * i.qty, 0);
 }
@@ -546,6 +710,8 @@ function renderCartItems() {
   cartItemsEl.innerHTML = '';
 
   cart.forEach(item => {
+    const product = PRODUCTS.find(p => p.id === item.id);
+    const sizes = product ? product.sizes : [];
     const el = document.createElement('div');
     el.className = 'cart-item';
     el.innerHTML = `
@@ -554,7 +720,11 @@ function renderCartItems() {
       </div>
       <div class="cart-item-info">
         <h4>${item.name}</h4>
-        <p class="cart-item-meta">${item.color} · Size ${item.size}</p>
+        <p class="cart-item-meta">${item.color}</p>
+        <label class="cart-item-size-label" for="cart-size-${item.key}">Size</label>
+        <select class="cart-item-size" id="cart-size-${item.key}" data-key="${item.key}">
+          ${sizes.map(size => `<option value="${size}" ${size === item.size ? 'selected' : ''}>${size}</option>`).join('')}
+        </select>
         <p class="cart-item-price">৳${(item.price * item.qty).toLocaleString()}</p>
         <div class="cart-item-controls">
           <button class="qty-btn" data-key="${item.key}" data-delta="-1">
@@ -574,6 +744,7 @@ function renderCartItems() {
     el.querySelectorAll('.qty-btn').forEach(btn => {
       btn.addEventListener('click', () => changeQty(btn.dataset.key, parseInt(btn.dataset.delta)));
     });
+    el.querySelector('.cart-item-size')?.addEventListener('change', e => changeCartItemSize(item.key, e.target.value));
     el.querySelector('.cart-item-remove').addEventListener('click', () => removeFromCart(item.key));
 
     cartItemsEl.appendChild(el);
@@ -675,6 +846,8 @@ function updateCheckoutSummary() {
   // Render items
   checkoutOrderItems.innerHTML = '';
   cart.forEach(item => {
+    const product = PRODUCTS.find(p => p.id === item.id);
+    const sizes = product ? product.sizes : [];
     const el = document.createElement('div');
     el.className = 'co-item';
     el.innerHTML = `
@@ -683,7 +856,11 @@ function updateCheckoutSummary() {
       </div>
       <div class="co-item-info">
         <h5>${item.name}</h5>
-        <p>${item.color} · Size ${item.size}</p>
+        <p>${item.color}</p>
+        <label class="co-item-size-label" for="co-size-${item.key}">Size</label>
+        <select class="co-item-size" id="co-size-${item.key}" data-key="${item.key}">
+          ${sizes.map(size => `<option value="${size}" ${size === item.size ? 'selected' : ''}>${size}</option>`).join('')}
+        </select>
       </div>
       <div class="co-item-controls">
         <button class="qty-btn co-qty" data-key="${item.key}" data-delta="-1">
@@ -705,6 +882,7 @@ function updateCheckoutSummary() {
         changeQty(btn.dataset.key, parseInt(btn.dataset.delta));
       });
     });
+    el.querySelector('.co-item-size')?.addEventListener('change', e => changeCartItemSize(item.key, e.target.value));
     el.querySelector('.co-item-remove').addEventListener('click', () => removeFromCart(item.key));
 
     checkoutOrderItems.appendChild(el);
