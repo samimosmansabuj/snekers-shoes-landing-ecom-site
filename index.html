@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZENXONE — Luxury Footwear</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════ LOADER ═══════════ -->
+  <div id="loader">
+    <div class="loader-inner">
+      <span class="loader-logo">ZENXONE</span>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">ZENXONE</a>
+      <ul class="nav-links">
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="cart-btn" id="cartToggle" aria-label="Open cart">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="nav-menu-btn" id="navMenuBtn" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="#collection" class="mobile-link">Collection</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section id="hero">
+    <div class="hero-video-wrap">
+      <video id="heroVideo" class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/hero-poster.jpg">
+        <source src="media/Prompt_Create_a_Premium_L.mp4" type="video/mp4">
+      </video>
+      <!-- <div class="hero-gradient-bg"></div> -->
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">SS 2025 Collection</span>
+      <h1 class="hero-headline">Walk Into <em>Your Story.</em></h1>
+      <!-- <p class="hero-sub">Handcrafted precision. Unmistakable presence.<br />Footwear that moves with intention.</p> -->
+      <div class="hero-cta-group">
+        <a href="#collection" class="btn-primary">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#about" class="btn-ghost">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COLLECTION INTRO ═══════════ -->
+  <section id="collection-intro" class="section-reveal">
+    <div class="container">
+      <h2 class="section-title">Featured <em>Collection</em></h2>
+      <div class="luxury-divider"><span></span><i class="fa-solid fa-diamond"></i><span></span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRODUCTS ═══════════ -->
+  <section id="collection" class="section-reveal">
+    <div class="container">
+      <div id="productSkeleton" class="product-grid">
+        <!-- Skeleton cards -->
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+      </div>
+      <div id="productGrid" class="product-grid" style="display:none;"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section id="about" class="section-reveal">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="section-eyebrow">Our Philosophy</span>
+        <h2 class="section-title">Crafted for the<br /><em>Conscious Few</em></h2>
+        <p>ZENXONE was born from a single obsession: to make footwear that earns its place in your life. Every pair
+          begins with sustainably sourced leather and ends with a sole designed to outlast trends.</p>
+        <p>We work with master cobblers in Dhaka who have spent decades perfecting their craft. No shortcuts. No
+          compromises.</p>
+        <div class="about-stats">
+          <div class="stat"><strong>2018</strong><span>Founded</span></div>
+          <div class="stat"><strong>12K+</strong><span>Customers</span></div>
+          <div class="stat"><strong>100%</strong><span>Handmade</span></div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-img-stack">
+          <div class="about-img about-img--back"></div>
+          <div class="about-img about-img--front"></div>
+        </div>
+        <div class="about-badge glass-card">
+          <i class="fa-solid fa-award"></i>
+          <span>Best Luxury<br />Brand 2024</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">ZENXONE</span>
+        <p>Premium footwear designed for those who refuse to walk unnoticed. Every pair tells a story worth telling.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#collection">Collection</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Size Guide</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Support</h4>
+        <ul>
+          <li><a href="tel:+8801700000000"><i class="fa-solid fa-phone"></i> +880 1700-000000</a></li>
+          <li><a href="https://wa.me/8801700000000"><i class="fa-brands fa-whatsapp"></i> WhatsApp Us</a></li>
+          <li><a href="mailto:hello@zenxone.com"><i class="fa-solid fa-envelope"></i> hello@zenxone.com</a></li>
+          <li><a href="#"><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 ZENXONE. All rights reserved.</span>
+      <span>Crafted with <i class="fa-solid fa-heart"></i> in Dhaka</span>
+    </div>
+  </footer>
+
+  <!-- ═══════════ CART DRAWER ═══════════ -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-bag-shopping"></i> Your Cart</h3>
+      <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-body" id="cartItems">
+      <!-- populated by JS -->
+    </div>
+    <div class="drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">৳0</strong>
+      </div>
+      <button class="btn-primary w-full" id="checkoutBtn">Proceed to Checkout <i
+          class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn-ghost w-full" id="continueShoppingBtn">Continue Shopping</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════ PRODUCT MODAL ═══════════ -->
+  <div class="modal-overlay" id="productModalOverlay">
+    <div class="product-modal glass-card" id="productModal">
+      <button class="modal-close" id="productModalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-inner" id="productModalInner">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ CHECKOUT MODAL ═══════════ -->
+  <div class="modal-overlay" id="checkoutModalOverlay">
+    <div class="checkout-modal glass-card" id="checkoutModal">
+      <button class="modal-close" id="checkoutModalClose"><i class="fa-solid fa-xmark"></i></button>
+      <div class="checkout-grid">
+        <!-- LEFT: Form -->
+        <div class="checkout-form-side">
+          <span class="section-eyebrow">Step 1 of 1</span>
+          <h3>Delivery<br /><em>Information</em></h3>
+          <div class="form-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="custName" placeholder="Full Name" />
+          </div>
+          <div class="form-group">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="custPhone" placeholder="Phone Number" />
+          </div>
+          <div class="form-group">
+            <i class="fa-brands fa-whatsapp"></i>
+            <input type="tel" id="custWhatsapp" placeholder="WhatsApp Number" />
+          </div>
+          <div class="form-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="custEmail" placeholder="Email Address" />
+          </div>
+          <div class="form-group">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="custAddress" placeholder="Full Address" />
+          </div>
+          <div class="form-group">
+            <i class="fa-solid fa-map"></i>
+            <select id="deliverydistrict">
+              <option value="">Select District</option>
+            </select>
+          </div>
+          <button class="btn-primary w-full" id="placeOrderBtn">
+            Place Order <i class="fa-solid fa-check"></i>
+          </button>
+        </div>
+        <!-- RIGHT: Order Summary -->
+        <div class="checkout-summary-side">
+          <h4>Order Summary</h4>
+          <div id="checkoutOrderItems" class="checkout-items"></div>
+          <div class="checkout-totals">
+            <div class="total-row"><span>Subtotal</span><strong id="coSubtotal">৳0</strong></div>
+            <div class="total-row"><span>Delivery</span><strong id="coDelivery">৳—</strong></div>
+            <div class="total-divider"></div>
+            <div class="total-row grand"><span>Grand Total</span><strong id="coGrand">৳0</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════ SUCCESS MODAL ═══════════ -->
+  <div class="modal-overlay" id="successModalOverlay">
+    <div class="success-modal glass-card">
+      <div class="success-icon">
+        <i class="fa-solid fa-circle-check"></i>
+      </div>
+      <h2>Order Confirmed!</h2>
+      <p>Thank you for shopping with us.<br />We've successfully received your order.<br />Our team will contact you
+        shortly for confirmation.</p>
+      <div class="success-countdown">
+        Redirecting to home in <strong id="countdownNum">6</strong>s
+      </div>
+      <button class="btn-primary" id="returnHomeBtn">Return Home Now <i class="fa-solid fa-house"></i></button>
+    </div>
+  </div>
+
+  <!-- ═══════════ MOBILE BOTTOM BAR ═══════════ -->
+  <div class="mobile-bottom-bar" id="mobileBottomBar" style="display:none;">
+    <button class="mbb-cart" id="mbbCartBtn"><i class="fa-solid fa-bag-shopping"></i> Cart (<span
+        id="mbbCount">0</span>)</button>
+    <button class="mbb-buy btn-primary" id="mbbBuyBtn">Buy Now <i class="fa-solid fa-bolt"></i></button>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
