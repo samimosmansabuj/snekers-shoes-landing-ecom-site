@@ -173,7 +173,7 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 10px;
-  padding: 30px 32px 30px 32px;
+  padding: 15px 10px 16px 15px;
   border-top: 1px solid var(--glass-border);
 }
 
@@ -202,7 +202,7 @@
 .feature-card {
   display: flex;
   gap: 12px;
-  padding: 16px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-md);
@@ -352,7 +352,6 @@
 .modal-actions-sticky {
   position: sticky;
   bottom: -36px;
-  margin: 20px -32px -36px -32px;
   padding: 20px 32px 36px 32px;
   background: rgba(11, 17, 32, 0.95);
   backdrop-filter: blur(10px);
@@ -827,12 +826,12 @@
 @media (max-width: 680px) {
   .checkout-form-side {
     padding: 24px 20px;
-    max-width: 81%;
+    /* max-width: 81%; */
   }
 
   .checkout-summary-side {
     padding: 20px;
-    max-width: 81%;
+    /* max-width: 81%; */
   }
 
   .modal-overlay {
