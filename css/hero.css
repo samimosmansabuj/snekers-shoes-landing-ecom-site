@@ -1,0 +1,146 @@
+/* ═══════════════════════════════════════════════════
+   ZENXONE — hero.css
+   Hero Section · Video · Content · Animations
+   ═══════════════════════════════════════════════════ */
+
+#hero {
+  position: relative;
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Video background */
+.hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  height: 495px;
+}
+#heroVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+/* Hero text content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 100px 24px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+.hero-eyebrow {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s 0.3s both;
+}
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-weight: 300;
+  line-height: 1.0;
+  margin-bottom: 20px;
+  animation: fadeUp 0.8s 0.5s both;
+}
+.hero-headline em {
+  font-style: italic;
+  color: var(--gold-light);
+  display: block;
+}
+.hero-sub {
+  font-size: 0.95rem;
+  color: var(--silver);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 420px;
+  animation: fadeUp 0.8s 0.7s both;
+}
+.hero-cta-group {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.8s 0.9s both;
+}
+
+/* Floating info cards */
+.hero-float {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: var(--radius-lg);
+  z-index: 3;
+  animation: floatCard 4s ease-in-out infinite alternate;
+}
+.hero-float i {
+  font-size: 1.1rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+.hero-float strong { display: block; font-size: 0.8rem; font-weight: 600; }
+.hero-float span   { display: block; font-size: 0.68rem; color: var(--silver); }
+.hero-float--tl { top: 22%; left: 5%; animation-delay: 0s; }
+.hero-float--tr { top: 22%; right: 5%; animation-delay: 1s; }
+.hero-float--br { bottom: 20%; right: 5%; animation-delay: 2s; }
+
+/* Scroll hint */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--silver);
+  animation: scrollBounce 2s ease-in-out infinite;
+  z-index: 3;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes floatCard {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
+}
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+@keyframes heroGlow {
+  from { opacity: 0.9; }
+  to   { opacity: 1; filter: brightness(1.05); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  #hero { min-height: auto; padding-bottom: 0; }
+  .hero-content { padding: 75px 20px 8px; }
+  .hero-float--tl { top: auto; bottom: 58%; left: 4%; font-size: 0.8rem; padding: 8px 12px; }
+  .hero-float--tr { display: none; }
+  .hero-float--br { bottom: 10%; right: 4%; font-size: 0.8rem; padding: 8px 12px; }
+  .hero-cta-group { flex-direction: column; }
+  .hero-cta-group .btn-primary,
+  .hero-cta-group .btn-ghost { width: 100%; justify-content: center; }
+}
+@media (max-width: 400px) {
+  .hero-headline { font-size: 2.6rem; }
+}

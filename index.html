@@ -5,19 +5,59 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZENXONE — Luxury Footwear</title>
+  <meta name="description" content="ZENXONE — Premium handcrafted footwear for the conscious few. Shop our SS 2025 collection of luxury shoes crafted in Dhaka." />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Master stylesheet (imports all section CSS files) -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
+  <template id="productCardTemplate">
+    <article class="product-card">
+      <!-- Image area -->
+      <div class="card-img-wrap">
+        <img class="card-product-img" src="" alt="" loading="lazy" />
+        <!-- Price + discount badge overlaid on image -->
+        <span class="card-badge">
+          <span class="card-price-sale"></span>
+          <span class="card-price-discount"></span>
+        </span>
+      </div>
+
+      <!-- Card body -->
+      <div class="card-body">
+        <h3 class="card-name"></h3>
+        <div class="card-meta">
+          <div class="card-rating">
+            <span class="stars card-stars"></span>
+            <span class="card-rating-text"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="card-actions">
+        <button class="btn-primary add-to-cart-btn" id="add-to-cart-btn">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span>Add to Cart</span>
+        </button>
+        <button class="btn-ghost buy-now-btn" id="buy-now-btn">Buy Now</button>
+      </div>
+    </article>
+  </template>
+
 
   <!-- ═══════════ LOADER ═══════════ -->
   <div id="loader">
@@ -60,21 +100,18 @@
         poster="images/hero-poster.jpg">
         <source src="media/Prompt_Create_a_Premium_L.mp4" type="video/mp4">
       </video>
-      <!-- <div class="hero-gradient-bg"></div> -->
     </div>
-
     <div class="hero-content">
       <span class="hero-eyebrow">SS 2025 Collection</span>
       <h1 class="hero-headline">Walk Into <em>Your Story.</em></h1>
-      <!-- <p class="hero-sub">Handcrafted precision. Unmistakable presence.<br />Footwear that moves with intention.</p> -->
       <div class="hero-cta-group">
-        <a href="#collection" class="btn-primary">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="#about" class="btn-ghost">Our Story</a>
+        <a href="#collection" class="btn-primary" id="hero-explore-btn">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#about" class="btn-ghost" id="hero-story-btn">Our Story</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== PRODUCT SLIDER SECTION ===== -->
+  <!-- ═══════════ PRODUCT SLIDER (Featured / Latest Drops) ═══════════ -->
   <section class="products-section" id="products">
     <div class="section-header">
       <span class="section-eyebrow">Featured Collection</span>
@@ -84,7 +121,7 @@
     <!-- Swiper Slider -->
     <div class="swiper product-swiper">
       <div class="swiper-wrapper" id="productSwiperWrapper">
-        <!-- Cards injected by JS -->
+        <!-- Cards injected by products.js from #productCardTemplate -->
       </div>
       <div class="swiper-pagination" style="position: inherit; margin-top: 20px;"></div>
       <div class="swiper-button-prev"></div>
@@ -102,16 +139,17 @@
     </div>
   </section>
 
-  <!-- ═══════════ PRODUCTS ═══════════ -->
+  <!-- ═══════════ PRODUCTS GRID ═══════════ -->
   <section id="collection" class="section-reveal">
     <div class="container">
+      <!-- Skeleton loader (hidden after products load) -->
       <div id="productSkeleton" class="product-grid">
-        <!-- Skeleton cards -->
         <div class="skeleton-card"></div>
         <div class="skeleton-card"></div>
         <div class="skeleton-card"></div>
         <div class="skeleton-card"></div>
       </div>
+      <!-- Product grid (shown after products load) -->
       <div id="productGrid" class="product-grid" style="display:none;"></div>
     </div>
   </section>
@@ -142,6 +180,17 @@
           <span>Best Luxury<br />Brand 2024</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ BRAND STRIP ═══════════ -->
+  <section class="brand-strip">
+    <div class="brand-strip-inner">
+      <span>ZENXONE</span>
+      <span>×</span>
+      <span>Exclusive</span>
+      <span>×</span>
+      <span>Crafted to Last</span>
     </div>
   </section>
 
@@ -189,18 +238,17 @@
   <aside class="cart-drawer" id="cartDrawer">
     <div class="drawer-header">
       <h3><i class="fa-solid fa-bag-shopping"></i> Your Cart</h3>
-      <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+      <button class="drawer-close" id="drawerClose" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button>
     </div>
     <div class="drawer-body" id="cartItems">
-      <!-- populated by JS -->
+      <!-- populated by cart-drawer.js -->
     </div>
     <div class="drawer-footer" id="cartFooter" style="display:none;">
       <div class="cart-subtotal">
         <span>Subtotal</span>
         <strong id="cartSubtotal">৳0</strong>
       </div>
-      <button class="btn-primary w-full" id="checkoutBtn">Proceed to Checkout <i
-          class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn-primary w-full" id="checkoutBtn">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
       <button class="btn-ghost w-full" id="continueShoppingBtn">Continue Shopping</button>
     </div>
   </aside>
@@ -208,9 +256,9 @@
   <!-- ═══════════ PRODUCT MODAL ═══════════ -->
   <div class="modal-overlay" id="productModalOverlay">
     <div class="product-modal glass-card" id="productModal">
-      <button class="modal-close" id="productModalClose"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="productModalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <div class="modal-inner" id="productModalInner">
-        <!-- populated by JS -->
+        <!-- populated by modal-product.js -->
       </div>
     </div>
   </div>
@@ -218,7 +266,7 @@
   <!-- ═══════════ CHECKOUT MODAL ═══════════ -->
   <div class="modal-overlay" id="checkoutModalOverlay">
     <div class="checkout-modal glass-card" id="checkoutModal">
-      <button class="modal-close" id="checkoutModalClose"><i class="fa-solid fa-xmark"></i></button>
+      <button class="modal-close" id="checkoutModalClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
       <div class="checkout-grid">
         <!-- LEFT: Form -->
         <div class="checkout-form-side">
@@ -287,13 +335,33 @@
 
   <!-- ═══════════ MOBILE BOTTOM BAR ═══════════ -->
   <div class="mobile-bottom-bar" id="mobileBottomBar" style="display:none;">
-    <button class="mbb-cart" id="mbbCartBtn"><i class="fa-solid fa-bag-shopping"></i> Cart (<span
-        id="mbbCount">0</span>)</button>
+    <button class="mbb-cart" id="mbbCartBtn"><i class="fa-solid fa-bag-shopping"></i> Cart (<span id="mbbCount">0</span>)</button>
     <button class="mbb-buy btn-primary" id="mbbBuyBtn">Buy Now <i class="fa-solid fa-bolt"></i></button>
   </div>
 
+  <!-- ═══════════ SCRIPTS ═══════════ -->
+  <!-- Swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="js/script.js"></script>
+
+  <!-- Data (must be first — others depend on PRODUCTS) -->
+  <script src="js/data.js"></script>
+
+  <!-- Cart state (must be before UI modules that use cart functions) -->
+  <script src="js/cart.js"></script>
+
+  <!-- UI Modules -->
+  <script src="js/ui-loader.js"></script>
+  <script src="js/ui-navbar.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/cart-drawer.js"></script>
+  <script src="js/modal-product.js"></script>
+  <script src="js/modal-checkout.js"></script>
+  <script src="js/modal-success.js"></script>
+  <script src="js/mobile-bar.js"></script>
+
+  <!-- Main entry point -->
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
