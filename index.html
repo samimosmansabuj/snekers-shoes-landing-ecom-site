@@ -5,12 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZENXONE — Luxury Footwear</title>
-  <meta name="description" content="ZENXONE — Premium handcrafted footwear for the conscious few. Shop our SS 2025 collection of luxury shoes crafted in Dhaka." />
+  <meta name="description"
+    content="ZENXONE — Premium handcrafted footwear for the conscious few. Shop our SS 2025 collection of luxury shoes crafted in Dhaka." />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -62,7 +65,13 @@
   <!-- ═══════════ LOADER ═══════════ -->
   <div id="loader">
     <div class="loader-inner">
-      <span class="loader-logo">ZENXONE</span>
+      <!-- Rotating Spare Logo -->
+      <div class="loader-spare-logo">
+        <img src="media/zenxone - icon.png" alt="ZENXONE Icon">
+      </div>
+      <span class="loader-logo">
+        <img src="media/zenxone-write logo.png" alt="zenxone-loader-logo" style="height: 50px">
+      </span>
       <div class="loader-bar">
         <div class="loader-fill"></div>
       </div>
@@ -72,10 +81,16 @@
   <!-- ═══════════ NAVBAR ═══════════ -->
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">ZENXONE</a>
+
+      <!-- <a href="#hero" class="nav-logo">ZENXONE</a> -->
+      <a href="/" class="nav-logo">
+        <img src="media/zenxone - icon.png" alt="">
+        <img src="media/zenxone-write logo.png" alt="">
+      </a>
+
       <ul class="nav-links">
         <li><a href="#collection">Collection</a></li>
-        <li><a href="#about">About</a></li>
+        <!-- <li><a href="#about">About</a></li> -->
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="cart-btn" id="cartToggle" aria-label="Open cart">
@@ -88,7 +103,7 @@
     </div>
     <div class="nav-mobile-menu" id="navMobileMenu">
       <a href="#collection" class="mobile-link">Collection</a>
-      <a href="#about" class="mobile-link">About</a>
+      <!-- <a href="#about" class="mobile-link">About</a> -->
       <a href="#contact" class="mobile-link">Contact</a>
     </div>
   </nav>
@@ -102,12 +117,12 @@
       </video>
     </div>
     <div class="hero-content">
-      <span class="hero-eyebrow">SS 2025 Collection</span>
-      <h1 class="hero-headline">Walk Into <em>Your Story.</em></h1>
-      <div class="hero-cta-group">
+      <!-- <span class="hero-eyebrow">SS 2025 Collection</span>
+      <h1 class="hero-headline">Walk Into <em>Your Story.</em></h1> -->
+      <!-- <div class="hero-cta-group">
         <a href="#collection" class="btn-primary" id="hero-explore-btn">Explore Collection <i class="fa-solid fa-arrow-right"></i></a>
         <a href="#about" class="btn-ghost" id="hero-story-btn">Our Story</a>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -155,7 +170,7 @@
   </section>
 
   <!-- ═══════════ ABOUT ═══════════ -->
-  <section id="about" class="section-reveal">
+  <!-- <section id="about" class="section-reveal">
     <div class="container about-grid">
       <div class="about-text">
         <span class="section-eyebrow">Our Philosophy</span>
@@ -181,7 +196,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- ═══════════ BRAND STRIP ═══════════ -->
   <section class="brand-strip">
@@ -198,7 +213,9 @@
   <footer id="contact">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="footer-logo">ZENXONE</span>
+        <span class="footer-logo">
+          <img src="media/zenxone-write logo.png" alt="zenxone" style="height: 50px;">
+        </span>
         <p>Premium footwear designed for those who refuse to walk unnoticed. Every pair tells a story worth telling.</p>
         <div class="social-icons">
           <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
@@ -206,16 +223,6 @@
           <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
           <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
         </div>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#collection">Collection</a></li>
-          <li><a href="#about">Our Story</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#">Size Guide</a></li>
-          <li><a href="#">Returns</a></li>
-        </ul>
       </div>
       <div class="footer-col">
         <h4>Customer Support</h4>
@@ -229,7 +236,6 @@
     </div>
     <div class="footer-bottom">
       <span>© 2025 ZENXONE. All rights reserved.</span>
-      <span>Crafted with <i class="fa-solid fa-heart"></i> in Dhaka</span>
     </div>
   </footer>
 
@@ -248,7 +254,8 @@
         <span>Subtotal</span>
         <strong id="cartSubtotal">৳0</strong>
       </div>
-      <button class="btn-primary w-full" id="checkoutBtn">Proceed to Checkout <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="btn-primary w-full" id="checkoutBtn">Proceed to Checkout <i
+          class="fa-solid fa-arrow-right"></i></button>
       <button class="btn-ghost w-full" id="continueShoppingBtn">Continue Shopping</button>
     </div>
   </aside>
@@ -271,7 +278,7 @@
         <!-- LEFT: Form -->
         <div class="checkout-form-side">
           <span class="section-eyebrow">Step 1 of 1</span>
-          <h3>Delivery<br /><em>Information</em></h3>
+          <h3>Delivery <em>Information</em></h3>
           <div class="form-group">
             <i class="fa-solid fa-user"></i>
             <input type="text" id="custName" placeholder="Full Name" />
@@ -335,7 +342,8 @@
 
   <!-- ═══════════ MOBILE BOTTOM BAR ═══════════ -->
   <div class="mobile-bottom-bar" id="mobileBottomBar" style="display:none;">
-    <button class="mbb-cart" id="mbbCartBtn"><i class="fa-solid fa-bag-shopping"></i> Cart (<span id="mbbCount">0</span>)</button>
+    <button class="mbb-cart" id="mbbCartBtn"><i class="fa-solid fa-bag-shopping"></i> Cart (<span
+        id="mbbCount">0</span>)</button>
     <button class="mbb-buy btn-primary" id="mbbBuyBtn">Buy Now <i class="fa-solid fa-bolt"></i></button>
   </div>
 

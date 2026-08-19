@@ -7,11 +7,14 @@
 
 'use strict';
 
-/* Products render হয় loader hide হওয়ার পরে */
+/* Products render হয় loader hide হওয়ার পরে এবং data fetch হওয়ার পরে */
 window.addEventListener('load', () => {
-  setTimeout(() => {
-    initProducts();       // products.js
-  }, 1000); // loader animation শেষ হওয়ার পরে (ui-loader.js এর সাথে sync)
+  fetchProducts().then(() => {
+    // API থেকে ডাটা আসার পরে UI render করুন
+    setTimeout(() => {
+      initProducts();       // products.js
+    }, 1000); // loader animation শেষ হওয়ার পরে
+  });
 });
 
 /* DOMContentLoaded এ cart badge restore করুন */

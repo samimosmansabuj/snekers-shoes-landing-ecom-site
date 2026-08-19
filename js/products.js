@@ -27,12 +27,12 @@ function buildProductCard(product) {
   img.alt = product.name;
 
   // Badge (price overlay on image)
-  card.querySelector('.card-price-sale').textContent   = `৳${product.salePrice.toLocaleString()}`;
+  card.querySelector('.card-price-sale').textContent = `৳${product.salePrice.toLocaleString()}`;
   card.querySelector('.card-price-discount').textContent = `(-${product.discount})`;
 
   // Name, stars, rating text
-  card.querySelector('.card-name').textContent        = product.name;
-  card.querySelector('.card-stars').innerHTML         = renderStars(product.rating);
+  card.querySelector('.card-name').textContent = product.name;
+  card.querySelector('.card-stars').innerHTML = renderStars(product.rating);
   card.querySelector('.card-rating-text').textContent = `${product.rating} (${product.reviews})`;
 
   // Event: open product modal on image or name click
@@ -59,7 +59,7 @@ function buildProductCard(product) {
 ════════════════════════════════════ */
 function renderProductGrid() {
   const skeleton = document.getElementById('productSkeleton');
-  const grid     = document.getElementById('productGrid');
+  const grid = document.getElementById('productGrid');
   if (!grid) return;
 
   // Simulate loading delay (replace with actual API fetch later)
@@ -113,8 +113,8 @@ function renderProductSwiper() {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      640:  { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 0  },
-      900:  { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 8  },
+      640: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 0 },
+      900: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 8 },
       1200: { slidesPerView: 5, slidesPerGroup: 5, spaceBetween: 10 },
     },
   });

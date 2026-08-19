@@ -18,6 +18,7 @@
 }
 .products-section .section-header {
   margin-bottom: 22px;
+  text-align: center;
 }
 
 /* Swiper */
@@ -60,7 +61,7 @@
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 0fr));
   gap: 15px;
 }
 
@@ -181,7 +182,7 @@
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 600;
-  color: #0b1120;
+  /* color: #0b1120; */
 }
 .discount-badge {
   font-size: 0.65rem;

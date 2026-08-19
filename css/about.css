@@ -10,29 +10,34 @@
   padding: 80px 0;
   background: linear-gradient(180deg, transparent 0%, rgba(30, 45, 69, 0.3) 100%);
 }
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
 }
+
 .about-text p {
   font-size: 0.95rem;
   color: var(--silver);
   line-height: 1.8;
   margin-bottom: 16px;
 }
+
 .about-stats {
   display: flex;
   gap: 36px;
   margin-top: 32px;
 }
+
 .stat strong {
   display: block;
   font-family: var(--font-display);
   font-size: 2rem;
   color: var(--gold-light);
 }
+
 .stat span {
   font-size: 0.75rem;
   color: var(--silver);
@@ -41,41 +46,58 @@
 }
 
 /* Visual image stack */
-.about-visual  { position: relative; }
-.about-img-stack { position: relative; height: 380px; }
+.about-visual {
+  position: relative;
+}
+
+.about-img-stack {
+  position: relative;
+  height: 380px;
+}
+
 .about-img {
   position: absolute;
   border-radius: var(--radius-xl);
   overflow: hidden;
 }
+
 .about-img--back {
-  width: 72%; height: 75%;
-  top: 0; right: 0;
+  width: 72%;
+  height: 75%;
+  top: 0;
+  right: 0;
   background: linear-gradient(135deg, var(--navy-light), var(--navy-mid));
   border: 1px solid var(--glass-border);
 }
+
 .about-img--front {
-  width: 62%; height: 70%;
-  bottom: 0; left: 0;
+  width: 62%;
+  height: 70%;
+  bottom: 0;
+  left: 0;
   background: linear-gradient(135deg, #1e2d45, #0f1c2e);
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-card);
 }
+
 .about-img--back::before {
   content: '';
   position: absolute;
   inset: 20px;
   background: radial-gradient(ellipse at 60% 50%, rgba(184, 150, 90, 0.15) 0%, transparent 70%);
 }
+
 .about-img--front::before {
   content: '';
   position: absolute;
   inset: 20px;
   background: radial-gradient(ellipse at 40% 60%, rgba(200, 205, 214, 0.1) 0%, transparent 70%);
 }
+
 .about-badge {
   position: absolute;
-  bottom: 32px; right: -12px;
+  bottom: 32px;
+  right: -12px;
   padding: 16px 20px;
   border-radius: var(--radius-lg);
   display: flex;
@@ -83,8 +105,16 @@
   gap: 12px;
   z-index: 2;
 }
-.about-badge i    { font-size: 1.4rem; color: var(--gold); }
-.about-badge span { font-size: 0.8rem; line-height: 1.5; }
+
+.about-badge i {
+  font-size: 1.4rem;
+  color: var(--gold);
+}
+
+.about-badge span {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
 
 /* ════════════════════════════════════
    BRAND STRIP
@@ -95,6 +125,7 @@
   border-bottom: 1px solid var(--glass-border);
   overflow: hidden;
 }
+
 .brand-strip-inner {
   display: flex;
   justify-content: center;
@@ -110,9 +141,22 @@
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
-  .about-grid   { grid-template-columns: 1fr; }
-  .about-visual { display: none; }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-visual {
+    display: none;
+  }
 }
+
 @media (max-width: 680px) {
-  .about-stats { gap: 24px; }
+  .about-stats {
+    gap: 24px;
+  }
+
+  .brand-strip-inner {
+    gap: 15px;
+    font-size: 12px;
+  }
 }

@@ -9,8 +9,8 @@
    DISTRICT DATA
 ════════════════════════════════════ */
 function getDeliveryCharge(district) {
-  if (!district)              return 0;
-  if (district === 'dhaka')      return 80;
+  if (!district) return 0;
+  if (district === 'dhaka') return 80;
   if (district === 'chattogram') return 120;
   return 150;
 }
@@ -35,12 +35,12 @@ function loadDistricts() {
     .catch(() => {
       // Fallback districts if API fails
       [
-        { value: 'dhaka',      text: 'ঢাকা' },
+        { value: 'dhaka', text: 'ঢাকা' },
         { value: 'chattogram', text: 'চট্টগ্রাম' },
-        { value: 'sylhet',     text: 'সিলেট' },
-        { value: 'rajshahi',   text: 'রাজশাহী' },
-        { value: 'khulna',     text: 'খুলনা' },
-        { value: 'barishal',   text: 'বরিশাল' },
+        { value: 'sylhet', text: 'সিলেট' },
+        { value: 'rajshahi', text: 'রাজশাহী' },
+        { value: 'khulna', text: 'খুলনা' },
+        { value: 'barishal', text: 'বরিশাল' },
       ].forEach(d => {
         const opt = document.createElement('option');
         opt.value = d.value;
@@ -62,7 +62,7 @@ function updateCheckoutSummary() {
 
   currentCart.forEach(item => {
     const product = PRODUCTS.find(p => p.id === item.id);
-    const sizes   = product ? product.sizes : [];
+    const sizes = product ? product.sizes : [];
 
     const el = document.createElement('div');
     el.className = 'co-item';
@@ -70,27 +70,32 @@ function updateCheckoutSummary() {
       <div class="co-item-img">
         <img src="${item.image}" alt="${item.name}" loading="lazy" />
       </div>
-      <div class="co-item-info">
-        <h5>${item.name}</h5>
-        <p>${item.color}</p>
-        <label class="co-item-size-label" for="co-size-${item.key}">Size</label>
-        <select class="co-item-size" id="co-size-${item.key}" data-key="${item.key}">
-          ${sizes.map(s => `<option value="${s}" ${s === item.size ? 'selected' : ''}>${s}</option>`).join('')}
-        </select>
-      </div>
-      <div class="co-item-controls">
-        <button class="qty-btn co-qty" data-key="${item.key}" data-delta="-1" aria-label="Decrease">
-          <i class="fa-solid fa-minus"></i>
-        </button>
-        <span class="qty-num">${item.qty}</span>
-        <button class="qty-btn co-qty" data-key="${item.key}" data-delta="1" aria-label="Increase">
-          <i class="fa-solid fa-plus"></i>
-        </button>
-      </div>
-      <span class="co-item-price">৳${(item.price * item.qty).toLocaleString()}</span>
-      <button class="co-item-remove" data-key="${item.key}" aria-label="Remove">
-        <i class="fa-solid fa-xmark"></i>
-      </button>`;
+      <div class="co-item-details">
+        <div class="co-item-header">
+          <h5 title="${item.name}">${item.name}</h5>
+        </div>
+        <div class="co-item-size-wrapper">
+          <label class="co-item-size-label" for="co-size-${item.key}">Size</label>
+          <select class="co-item-size" id="co-size-${item.key}" data-key="${item.key}">
+            ${sizes.map(s => `<option value="${s}" ${s === item.size ? 'selected' : ''}>${s}</option>`).join('')}
+          </select>
+        </div>
+        <div class="co-item-actions">
+          <div class="co-item-controls">
+            <button class="qty-btn co-qty" data-key="${item.key}" data-delta="-1" aria-label="Decrease">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <span class="qty-num">${item.qty}</span>
+            <button class="qty-btn co-qty" data-key="${item.key}" data-delta="1" aria-label="Increase">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <span class="co-item-price">৳${(item.price * item.qty).toLocaleString()}</span>
+          <button class="co-item-remove" data-key="${item.key}" aria-label="Remove">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>`;
 
     el.querySelectorAll('.co-qty').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -120,15 +125,15 @@ function recalcTotals() {
   const district = document.getElementById('deliverydistrict')?.value;
   const subtotal = getCartTotal();
   const delivery = district ? getDeliveryCharge(district) : 0;
-  const grand    = subtotal + delivery;
+  const grand = subtotal + delivery;
 
   const coSubtotal = document.getElementById('coSubtotal');
   const coDelivery = document.getElementById('coDelivery');
-  const coGrand    = document.getElementById('coGrand');
+  const coGrand = document.getElementById('coGrand');
 
   if (coSubtotal) coSubtotal.textContent = `৳${subtotal.toLocaleString()}`;
   if (coDelivery) coDelivery.textContent = district ? `৳${delivery}` : '৳—';
-  if (coGrand)    coGrand.textContent    = `৳${grand.toLocaleString()}`;
+  if (coGrand) coGrand.textContent = `৳${grand.toLocaleString()}`;
 }
 
 /* ════════════════════════════════════
@@ -136,9 +141,9 @@ function recalcTotals() {
 ════════════════════════════════════ */
 function validateForm() {
   const fields = [
-    { id: 'custName',    msg: 'Please enter your name.' },
-    { id: 'custPhone',   msg: 'Please enter your phone number.' },
-    { id: 'custEmail',   msg: 'Please enter your email address.' },
+    { id: 'custName', msg: 'Please enter your name.' },
+    { id: 'custPhone', msg: 'Please enter your phone number.' },
+    { id: 'custEmail', msg: 'Please enter your email address.' },
     { id: 'custAddress', msg: 'Please enter your address.' },
   ];
 
