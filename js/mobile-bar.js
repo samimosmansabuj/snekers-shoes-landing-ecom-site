@@ -21,7 +21,10 @@ function initMobileBar() {
     if (getCart().length > 0) {
       openCartDrawer();
     } else if (lastViewedProduct) {
-      addToCart(lastViewedProduct, lastViewedProduct.colors[0].name, lastViewedProduct.sizes[0], 1);
+      const defaultSize = lastViewedProduct.sizes[0];
+      const matchedVariant = lastViewedProduct.variants ? lastViewedProduct.variants.find(v => String(v.attributes?.size) === String(defaultSize)) : null;
+      const variantId = matchedVariant ? matchedVariant.id : null;
+      addToCart(lastViewedProduct, lastViewedProduct.colors[0].name, defaultSize, 1, variantId);
       openCartDrawer();
     }
   });

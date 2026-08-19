@@ -193,11 +193,66 @@ function initCheckoutModal() {
   });
   document.getElementById('deliverydistrict')?.addEventListener('change', recalcTotals);
 
-  document.getElementById('placeOrderBtn')?.addEventListener('click', () => {
-    if (getCart().length === 0) return;
+  document.getElementById('placeOrderBtn')?.addEventListener('click', async () => {
+    const cartItems = getCart();
+    if (cartItems.length === 0) return;
     if (!validateForm()) return;
-    closeCheckoutModal();
-    openSuccessModal();
+
+    const btn = document.getElementById('placeOrderBtn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
+    btn.disabled = true;
+
+    try {
+      const trackingData = window.getAttributionData ? window.getAttributionData() : {};
+      
+      const payload = {
+        name: document.getElementById('custName').value.trim(),
+        phone: document.getElementById('custPhone').value.trim(),
+        address: document.getElementById('custAddress').value.trim(),
+        district: document.getElementById('deliverydistrict').value,
+        upazila: document.getElementById('deliveryUpazila')?.value || '',
+        items: cartItems.map(item => {
+          let vId = item.variant_id;
+          if (!vId && typeof PRODUCTS !== 'undefined') {
+            const prod = PRODUCTS.find(p => p.id === item.id);
+            if (prod && prod.variants) {
+              const matched = prod.variants.find(v => String(v.attributes?.size) === String(item.size));
+              if (matched) vId = matched.id;
+            }
+          }
+          return {
+            product_id: item.id,
+            variant_id: vId || null,
+            quantity: item.qty
+          };
+        }),
+        ...trackingData
+      };
+
+      const response = await fetch('https://api.zenxone.com/api/checkout/place-order/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to place order');
+      }
+
+      // Order successful
+      if (typeof clearCart === 'function') clearCart();
+      closeCheckoutModal();
+      openSuccessModal();
+    } catch (error) {
+      console.error('Order error:', error);
+      alert('There was an error placing your order. Please try again.');
+    } finally {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }
   });
 }
 

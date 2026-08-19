@@ -106,6 +106,7 @@ function transformProductData(apiData) {
     reviewsList: apiData.reviews || [],
     colors: colors,
     sizes: sizes,
+    variants: apiData.variants || [],
     originalPrice: originalPrice,
     salePrice: salePrice,
     discount: discountStr,

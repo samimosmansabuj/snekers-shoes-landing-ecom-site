@@ -40,14 +40,22 @@ function buildProductCard(product) {
   card.querySelector('.card-name').addEventListener('click', () => openProductModal(product));
 
   // Event: Add to Cart
-  card.querySelector('.add-to-cart-btn').addEventListener('click', () => {
-    addToCart(product, product.colors[0].name, product.sizes[0], 1);
+  card.querySelector('.add-to-cart-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const defaultSize = product.sizes[0];
+    const matchedVariant = product.variants ? product.variants.find(v => String(v.attributes?.size) === String(defaultSize)) : null;
+    const variantId = matchedVariant ? matchedVariant.id : null;
+    addToCart(product, product.colors[0].name, defaultSize, 1, variantId);
     showMobileBottomBar(product);
   });
 
   // Event: Buy Now
-  card.querySelector('.buy-now-btn').addEventListener('click', () => {
-    addToCart(product, product.colors[0].name, product.sizes[0], 1);
+  card.querySelector('.buy-now-btn').addEventListener('click', (e) => {
+    e.stopPropagation();
+    const defaultSize = product.sizes[0];
+    const matchedVariant = product.variants ? product.variants.find(v => String(v.attributes?.size) === String(defaultSize)) : null;
+    const variantId = matchedVariant ? matchedVariant.id : null;
+    addToCart(product, product.colors[0].name, defaultSize, 1, variantId);
     openCartDrawer();
   });
 

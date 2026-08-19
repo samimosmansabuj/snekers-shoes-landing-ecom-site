@@ -26,12 +26,13 @@ function getCart() {
 }
 
 /* ── Mutations ── */
-function addToCart(product, color, size, qty) {
+function addToCart(product, color, size, qty, variant_id = null) {
   const key = `${product.id}_${color}_${size}`;
   const existing = cart.find(i => i.key === key);
 
   if (existing) {
     existing.qty += qty;
+    if (!existing.variant_id) existing.variant_id = variant_id;
   } else {
     cart.push({
       key,
@@ -42,6 +43,7 @@ function addToCart(product, color, size, qty) {
       size,
       qty,
       price: product.salePrice,
+      variant_id: variant_id
     });
   }
 
@@ -55,6 +57,16 @@ function removeFromCart(key) {
   saveCart();
   updateCartUI();
   /* Callers are responsible for re-rendering their views */
+}
+
+function clearCart() {
+  cart = [];
+  saveCart();
+  updateCartUI();
+  
+  if (typeof renderCartItems === 'function') {
+    renderCartItems();
+  }
 }
 
 function changeQty(key, delta) {

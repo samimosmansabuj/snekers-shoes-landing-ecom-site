@@ -216,14 +216,18 @@ function openProductModal(product) {
 
   /* ── Add to cart ── */
   document.getElementById('modalAddCart').addEventListener('click', () => {
-    addToCart(product, selectedColor, selectedSize, qty);
+    const matchedVariant = product.variants ? product.variants.find(v => String(v.attributes?.size) === String(selectedSize)) : null;
+    const variantId = matchedVariant ? matchedVariant.id : null;
+    addToCart(product, selectedColor, selectedSize, qty, variantId);
     closeProductModal();
     openCartDrawer();
   });
 
   /* ── Buy Now ── */
   document.getElementById('modalBuyNow').addEventListener('click', () => {
-    addToCart(product, selectedColor, selectedSize, qty);
+    const matchedVariant = product.variants ? product.variants.find(v => String(v.attributes?.size) === String(selectedSize)) : null;
+    const variantId = matchedVariant ? matchedVariant.id : null;
+    addToCart(product, selectedColor, selectedSize, qty, variantId);
     closeProductModal();
     openCartDrawer();
   });
