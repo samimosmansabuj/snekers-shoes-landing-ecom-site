@@ -171,12 +171,13 @@ function openProductModal(product) {
   });
 
   /* ── Init Reviews Swiper ── */
-  if (product.reviewsList && product.reviewsList.length > 0) {
-    new Swiper('.reviews-swiper', {
+  const reviewSwiperEl = inner.querySelector('.reviews-swiper');
+  if (reviewSwiperEl) {
+    new Swiper(reviewSwiperEl, {
       slidesPerView: 1.2,
       spaceBetween: 16,
       pagination: {
-        el: '.reviews-swiper .swiper-pagination',
+        el: reviewSwiperEl.querySelector('.swiper-pagination'),
         clickable: true,
       },
       breakpoints: {
